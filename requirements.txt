@@ -1,0 +1,2 @@
+ip2geotools==0.1.6
+Django==4.1.5

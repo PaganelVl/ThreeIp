@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block header %}Location of IP{% endblock header %}
+% block content %
+<div id="result">
+    <h1 id="ip">{{ ip }}</h1>
+    <h2 id="country">{{ country }}</h2>
+    <p>{{ region }}, {{ city }}</p>
+    
+</div>{% block content %}

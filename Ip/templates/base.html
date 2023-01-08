@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}3ip{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+    <header>
+        <h1>3ip</h1><small>by <b>Paganel</b></small>
+    </header>
+    <h1 class="h1">{% block header %}Get location of IP{% endblock header %}</h1>
+    <div class="content">
+        {% block form %}<div class="form">
+            <form action="result" method="POST">
+                {% csrf_token %}
+                <table>
+                    {{ form }}
+                </table>
+                <button type="submit">
+                    Get location
+                </button>
+            </form>
+        </div>{% endblock form %}
+        {% block content%}{% endblock content %}
+    </div>
+</body>
+</html>
